@@ -1,0 +1,182 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+    @font-face {
+        font-family: Saol Display;
+        src: url('../fonts/SaolDisplay-Light.eot');
+        src: url('../fonts/SaolDisplay-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/SaolDisplay-Light.woff2') format('woff2'), url('../fonts/SaolDisplay-Light.woff') format('woff'), url('../fonts/SaolDisplay-Light.ttf') format('truetype'), url('../fonts/SaolDisplay-Light.svg#SaolDisplay-Light') format('svg');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: Saol Display;
+        src: url('../fonts/SaolDisplay-LightItalic.eot');
+        src: url('../fonts/SaolDisplay-LightItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/SaolDisplay-LightItalic.woff2') format('woff2'), url('../fonts/SaolDisplay-LightItalic.woff') format('woff'), url('../fonts/SaolDisplay-LightItalic.ttf') format('truetype'), url('../fonts/SaolDisplay-LightItalic.svg#SaolDisplay-LightItalic') format('svg');
+        font-weight: 300;
+        font-style: italic;
+        font-display: swap;
+    }
+
+    .logo a {
+        @apply hidden;
+    }
+
+    .elmundo .logo a.elmundo {
+        @apply block;
+    }
+
+    .telva .logo a.telva {
+        @apply block;
+    }
+
+    .yodona .logo a.yodona {
+        @apply block;
+    }
+
+    .fueradeserie .logo a.fueradeserie {
+        @apply block;
+    }
+
+    .content h3 {
+        @apply text-4xl;
+        @apply font-headers;
+        @apply mb-8;
+    }
+
+    .content #destacado h3 {
+        @apply text-center;
+    }
+
+    .content p {
+        @apply mb-8;
+    }
+
+    .content p a {
+        @apply font-bold;
+        @apply underline;
+        @apply hover:text-primary;
+    }
+
+    .content ul,
+    .content ol {
+        @apply mb-8;
+        @apply list-inside;
+        margin-left: 1em;
+    }
+
+    .content ol {
+        counter-reset: li;
+        margin-left: 1.4em;
+    }
+
+    .content li {
+        @apply mb-3;
+        counter-increment: li;
+    }
+
+    .content ul li::before,
+    .content ol li::before {
+        @apply inline-block;
+        width: 1em; /* Also needed for space (tweak if needed) */
+        margin-left: -1em; /* Also needed for space (tweak if needed) */
+    }
+
+    .content ul li::before {
+        @apply font-bold;
+        content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        @apply text-primary;
+    }
+
+    .content ol li::before {
+        content: counter(li) '.'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        @apply font-headers;
+        font-size: 1.5rem;
+    }
+
+    .content blockquote {
+        @apply block;
+        @apply text-center;
+        @apply font-headers;
+        @apply relative;
+        @apply mb-8;
+        @apply pt-32;
+        font-size: 1.8rem;
+        @apply z-10;
+    }
+    .content blockquote:before {
+        content: '\201C';
+        @apply absolute;
+        @apply top-0;
+        left: 50%;
+        transform: translate(-50%, -18%);
+        @apply font-headers;
+        @apply text-center;
+        font-size: 400px;
+        @apply text-primary;
+        @apply z-0;
+    }
+    .content blockquote:after {
+        content: '\2013 \2003'attr(cite) '\2003 \2013';
+        @apply block;
+        @apply text-center;
+        @apply text-lg;
+        @apply text-primary;
+        @apply uppercase;
+        font-size: 1.2rem;
+        @apply tracking-wider;
+        @apply z-10;
+    }
+
+    .img-right {
+        @apply float-right;
+        @apply mb-8;
+        @apply ml-8;
+    }
+
+    .img-left {
+        @apply float-left;
+        @apply mb-8;
+        @apply mr-8;
+    }
+
+    .tns-outer {
+        @apply relative;
+    }
+
+    .tns-controls button {
+        @apply text-4xl;
+        @apply lg:text-5xl;
+        @apply xl:text-6xl;
+        @apply text-primary;
+        @apply absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+    .tns-controls button:first-child {
+        left: 0;
+    }
+
+    .tns-controls button:last-child {
+        right: 0;
+    }
+
+    .tns-inner {
+        @apply mx-6 !important;
+        @apply lg:mx-8 !important;
+        @apply xl:mx-20 !important;
+        @apply overflow-hidden;
+        @apply box-border;
+        @apply border;
+        @apply border-primary;
+    }
+
+    .tns-item {
+        @apply pt-8;
+        @apply px-8;
+    }
+}
