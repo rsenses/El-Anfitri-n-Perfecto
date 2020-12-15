@@ -66,7 +66,7 @@
 	<!--Nav-->
 	<nav class="bg-secondary p-2 mt-0 fixed w-full z-10 top-0">
         <div class="container mx-auto flex flex-wrap items-center">
-		    <div class="flex w-1/2 justify-start text-white font-extrabold logo">
+		    <div class="flex w-1/2 md:w-1/3 justify-start text-white logo hidden md:block">
 				<a class="text-white no-underline hover:text-white hover:no-underline elmundo" href="https://elmundo.es" onclick="envioSC('Anfitrion2020elmundo');gtag('event', 'link', {'event_category': 'elmundo'});">
 					<img src="/assets/img/logo-elmundo.svg" alt="El Mundo" style="width:130px">
 				</a>
@@ -80,7 +80,12 @@
 					<img src="/assets/img/logo-fueradeserie.svg" alt="Fuera de Serie" style="width:140px">
 				</a>
             </div>
-			<div class="flex w-1/2 pt-2 content-right justify-between md:justify-end">
+            <div class="flex w-1/2 md:w-1/3 justify-start text-white text-center">
+                <h1 class="uppercase text-center text-black font-bold font-headers w-full text-xl md:text-2xl">
+                    <a href="/">El Anfitrión Perfecto</a>
+                </h1>
+            </div>
+			<div class="flex w-1/2 md:w-1/3 pt-2 content-right justify-between md:justify-end">
 				<ul class="list-reset flex justify-between ml-auto">
                     <li class="mr-3">
                         <a class="inline-block no-underline rounded-full border border-black" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Felanfitrionperfecto.elmundo.es%2Fempresas%2Fnoticia.html%3Fcid%3DSMBOSO22801%26s_kw%3DBC-twitter&amp;text=T%C3%ADtulo%20de%20la%20noticia&amp;wrap_links=true" target="_blank" rel="nofollow" onclick="gtag('event', 'Social', {'event_category': 'Twitter'});envioEventoRedSocial('twitter');" title="Compártelo en Twitter" itemprop="sameAs">
@@ -215,7 +220,7 @@
             </a>
         </p>
         <p class="text-center">
-            El anfitrión perfecto es un proyecto de <a href="http://uestudio.es/" class="text-white hover:underline" target="_blank" onclick="envioSC('Anfitrion2020uestudio');gtag('event', 'link', {'event_category': 'uestudio'});">UE Studio</a> y empresas que buscan hacer esta Navidad más especial que nunca.
+            <a href="/" class="text-white hover:underline">El anfitrión perfecto</a> es un proyecto de <a href="http://uestudio.es/" class="text-white hover:underline" target="_blank" onclick="envioSC('Anfitrion2020uestudio');gtag('event', 'link', {'event_category': 'uestudio'});">UE Studio</a> y empresas que buscan hacer esta Navidad más especial que nunca.
         </p>
         <p class="text-center my-5">
             <small>© 2020 Unidad Editorial Información General, S.L.U | Politica de cookies</small>
