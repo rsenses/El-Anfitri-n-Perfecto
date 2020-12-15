@@ -251,6 +251,7 @@
             // window.history.pushState('', 'Slide '+info.displayIndex, page);
             window.location = page;
             gtag('config', 'UA-64259892-53', {'page_path': currentPath+page});
+            window.ueDataLayer.sendAnalyticsPage();
         }
 
         // bind function to event
