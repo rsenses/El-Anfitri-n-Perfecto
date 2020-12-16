@@ -1,0 +1,41 @@
+---
+layout: layout.liquid
+pageTitle: El Anfitrión Perfecto
+description: ¿Quieres ser el anfitrión perfecto esta Navidad? Te damos las claves para conseguirlo
+image: /assets/img/rrss.jpg
+---
+<header class="container mx-auto mt-32 lg:mt-44 mb-12 lg:mb-8">
+        <h1 class="uppercase text-center text-white font-headers lg:text-9xl md:text-8xl text-6xl hidden">
+            <span class="h1">El Anfitrión</span><br><em class="text-primary"><span class="h1">Perfecto</span></em>
+        </h1>
+        <hr class="border-l h-24 border-primary mx-auto" style="width:1px">
+    </header>
+
+
+	<!--Container-->
+	<main class="container mx-auto grid grid-cols-3 gap-4 font-body">
+        {% for post in collections.post reversed %}
+            {% assign mod3 = forloop.index0 | modulo: 3 %}
+            {% if mod3 == '1' %}
+                <div class="px-16 lg:mt-24 mb-24 grid-item">
+            {% else%}
+                <div class="px-4 mb-24 grid-item">
+            {% endif %}
+                <a href="{{ post.url }}">
+                    {% if mod3 == '1' %}
+                        <img src="/assets/img/{{ post.data.folder }}/principal2.jpg" alt="{{ post.data.pageTitle }}" class="parallax">
+                    {% else%}
+                        <img src="/assets/img/{{ post.data.folder }}/principal1.jpg" alt="{{ post.data.pageTitle }}" class="parallax">
+                    {% endif %}
+                </a>
+                <h2 class="text-4xl font-headers text-white mt-8">
+                    {{ post.data.category }}
+                </h2>
+                <p class="text-white tracking-wide mt-4 text-sm">
+                    <a href="{{ post.url }}">
+                        {{ post.data.pageTitle }}
+                    </a>
+                </p>
+            </div>
+        {% endfor %}
+    </main>

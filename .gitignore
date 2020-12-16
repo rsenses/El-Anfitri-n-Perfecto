@@ -5,3 +5,4 @@ public/yodona
 public/fueradeserie
 .sass-cache
 node_modules/
+.eleventy.js
